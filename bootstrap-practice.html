@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 7 - Exploring Bootstrap</title>
+
+  <!--************************************
+   $$$$$$\   $$$$$$\   $$$$$$\  
+  $$  __$$\ $$  __$$\ $$  __$$\ 
+  $$ /  \__|$$ /  \__|$$ /  \__|
+  $$ |      \$$$$$$\  \$$$$$$\  
+  $$ |       \____$$\  \____$$\ 
+  $$ |  $$\ $$\   $$ |$$\   $$ |
+  \$$$$$$  |\$$$$$$  |\$$$$$$  |
+   \______/  \______/  \______/ 
+                                
+  Description: CSS Section
+  **************************************-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <!--**********************************************************
+  $$\   $$\                           $$\                     
+  $$ |  $$ |                          $$ |                    
+  $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  
+  $$$$$$$$ |$$  __$$\  \____$$\ $$  __$$ |$$  __$$\ $$  __$$\ 
+  $$  __$$ |$$$$$$$$ | $$$$$$$ |$$ /  $$ |$$$$$$$$ |$$ |  \__|
+  $$ |  $$ |$$   ____|$$  __$$ |$$ |  $$ |$$   ____|$$ |      
+  $$ |  $$ |\$$$$$$$\ \$$$$$$$ |\$$$$$$$ |\$$$$$$$\ $$ |      
+  \__|  \__| \_______| \_______| \_______| \_______|\__|      
+                                                              
+  Description: Header Section
+  ************************************************************-->
+  <header id="home" class="mb-5">
+    <!-- Begin: Navigation Section -->
+    <nav class="navbar navbar-expand-md bg-danger fixed-top shadow">
+      <div class="container p-2">
+        <a class="navbar-brand text-white" href="#">Activity-7</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End: Navigation Section -->
+
+    <!-- Begin: Carousel Section -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-image bg-image-1 active">
+          <!-- <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2106&q=80" 
+               class="d-block w-100" 
+               alt="Web Dev Image"> -->
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">HTML</h5>
+            <p>HTML is the standard markup language for creating Web pages.</p>
+          </div>
+        </div>
+        <div class="carousel-item carousel-image bg-image-2">
+          <!-- <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+               class="d-block w-100" 
+               alt="Web Dev Image"> -->
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">CSS</h5>
+            <p>CSS is the language we use to style an HTML document.</p>
+          </div>
+        </div>
+        <div class="carousel-item carousel-image bg-image-3">
+          <!-- <img src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+               class="d-block w-100" 
+               alt="Web Dev Image"> -->
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-bold">Javascript</h5>
+            <p>JavaScript is a lightweight, interpreted programming language.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End: Carousel Section -->
+
+  </header>
+
+  <!--************************************
+  $$\      $$\           $$\           
+  $$$\    $$$ |          \__|          
+  $$$$\  $$$$ | $$$$$$\  $$\ $$$$$$$\  
+  $$\$$\$$ $$ | \____$$\ $$ |$$  __$$\ 
+  $$ \$$$  $$ | $$$$$$$ |$$ |$$ |  $$ |
+  $$ |\$  /$$ |$$  __$$ |$$ |$$ |  $$ |
+  $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
+  \__|     \__| \_______|\__|\__|  \__|
+                                      
+  Description: Main Section
+  **************************************-->
+  <main class="mb-5">
+
+    <!--**********************************************
+
+     $$$$$$\  $$\                             $$\     
+    $$  __$$\ $$ |                            $$ |    
+    $$ /  $$ |$$$$$$$\   $$$$$$\  $$\   $$\ $$$$$$\   
+    $$$$$$$$ |$$  __$$\ $$  __$$\ $$ |  $$ |\_$$  _|  
+    $$  __$$ |$$ |  $$ |$$ /  $$ |$$ |  $$ |  $$ |    
+    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |  $$ |$$\ 
+    $$ |  $$ |$$$$$$$  |\$$$$$$  |\$$$$$$  |  \$$$$  |
+    \__|  \__|\_______/  \______/  \______/    \____/ 
+                                                      
+                                                                                   
+    Description: About Section
+    ************************************************-->
+    <section id="about" class="container">
+      <h2 class="section-title pb-5">About Us</h2>
+
+      <!-- Begin: Row Section -->
+      <div class="row gx-5">
+        <!-- Begin: Row Section -->
+        <div class="col-md-6" data-aos="fade-up-right">
+            <img src="https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                 class="img-fluid rounded" 
+                 alt="Web Dev Image">
+        </div>
+        <!-- End: Row Section -->
+        <!-- Begin: Row Section -->
+        <div class="col-md-6" data-aos="fade-down-left">
+          <h3 class="about-title">Web Development</h3>
+          <p class="about-paragraph pb-3">
+            Cursus in hac habitasse platea dictumst. Maecenas volutpat blandit aliquam etiam erat velit. 
+            Morbi tempus iaculis urna id volutpat lacus. Pellentesque diam volutpat commodo sed. 
+            Massa eget egestas purus viverra accumsan in nisl. Sed elementum tempus egestas.
+          </p>
+          <p class="about-paragraph">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde doloribus aliquid corporis 
+            illum temporibus! Eum, atque vel molestias aliquid quaerat ex aspernatur accusantium amet, 
+            perferendis quasi delectus officia explicabo quae voluptatibus maxime fugiat optio non minima 
+            suscipit exercitationem? Animi, reiciendis.
+          </p>
+        </div>
+        <!-- End: Row Section -->
+      </div>
+      <!-- End: Row Section -->
+
+    </section>
+    
+    
+    <!--***********************************************************************
+     $$$$$$\                                $$\                               
+    $$  __$$\                               \__|                              
+    $$ /  \__| $$$$$$\   $$$$$$\ $$\    $$\ $$\  $$$$$$$\  $$$$$$\   $$$$$$$\ 
+    \$$$$$$\  $$  __$$\ $$  __$$\\$$\  $$  |$$ |$$  _____|$$  __$$\ $$  _____|
+     \____$$\ $$$$$$$$ |$$ |  \__|\$$\$$  / $$ |$$ /      $$$$$$$$ |\$$$$$$\  
+    $$\   $$ |$$   ____|$$ |       \$$$  /  $$ |$$ |      $$   ____| \____$$\ 
+    \$$$$$$  |\$$$$$$$\ $$ |        \$  /   $$ |\$$$$$$$\ \$$$$$$$\ $$$$$$$  |
+     \______/  \_______|\__|         \_/    \__| \_______| \_______|\_______/ 
+                                                                                                                          
+                                                                                   
+    Description: Services Section
+    *************************************************************************-->
+    <section id="services" class="container">
+      <h2 class="section-title pb-5">Services</h2>
+      <!-- Begin: Row Section -->
+      <div class="row gx-5 gy-5 mb-5" data-aos="zoom-in">
+        <!-- Begin: Row Section -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/1413514774/photo/stylized-3d-html-icon-design.jpg?s=612x612&w=0&k=20&c=-TU7szSFBZ7NfmiHQ7_3G7BUo5CYhqemTEtP_PGMntU=" 
+                class="card-img-top" 
+                alt="HTML Logo">
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://www.w3schools.com/html/default.asp" 
+                  class="btn btn-primary" 
+                  target="_blank">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/1413514596/photo/stylized-3d-css-icon-design.jpg?s=612x612&w=0&k=20&c=AO7LVxgIs-flkGxxQFXbTD6H3HLfNyq07zf8Riiu6sM=" 
+                class="card-img-top" 
+                alt="HTML Logo">
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://www.w3schools.com/css/default.asp" 
+                  class="btn btn-primary" 
+                  target="_blank">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN8AAADiCAMAAAD5w+JtAAAAulBMVEX////13hkAAAD03AD9+eH464f+/fT89s7/7hr46hpkWgn/6xr/6Rr34Bns3Bj85Rr/8RpaWAp+dAwvKgSilBDz4BgrKATn0he+sRNyZws+OAX05hlJQwfFthOFeQ2kmBBWTgjbxxXr1xeOgw6roBH/9xtaVQloXgq1pxIbFwGflxCbjA8OCwFRSgjczRYjHQOtpRI3MQXOvxVCPQZzbAsSEAHLxBaQiA4nIQOKfw4eGwO+tBSVkRD46X1ErqSaAAAFq0lEQVR4nO2cC3PaOBRGa7fberGEHMCxYSEEQ4gTwGmcNK+2//9vrU0SsF7GO8NGVuc70046gDI+SNbVvZL76RMAAAAAAAAAAAAAAAAAAAAAAIDW8/Vbe/lyBL8vn9vL76P4OW3l81/wgx/8TAE/+MHPHPCDH/zMAT/4wc8c8IMf/MwBP/jBzxzwgx/8zAE/+MHPHPCDH/zMAT/4wc8c8IMf/MwBP/jBzxzwgx/8zAE/+MHPHPCDH/zMAT/4wc8c8IMf/JpBeeo+yHwvCMo/Pqv7YKv8aNKt4uium7FuMu2dnJwsi7+9RdZlRK/YIr9/XI5LX/klkCDtXfGfHF4TX2fYIr+/+avueIrPEGflquhlGkOr/ChJ+0o9110PKLPdj7FLjV3JpqsStMiPZDc1egUzYrMfy3Rjc0cuC1rjR9ntIT13nUhD1Bo/v3NQz3WvQnEWtcWPpQ30ijghjlBb/MJRIz93IoxQS/zYopme6wrLOkv8glPZpD+SJ9R+KtyAdvjRmSiy/v4QJVEe88N22LXz/mNTQW/lsW0OxYLJ0+7F0SSQFqGW+A359872q2mWvMfFeahYoNnhF/J32ks1zLFs24Oj3FNlEHb4CanhkAsdZFK8NAiU6YOdfgvehfQ6mdrOUr+Yt6EJ0+nZ6bcSokBNhclKv3HQ+Jfa4ReuubfWWW1N0D4/thE6sKYiaKXfI/+eu4wUtQiL/b4Lfu5p7GvnTPv8aCL6ue5mUqxB/xA/J7iTBd1R7Gjr1pb5sVjh57p3j3V7Dxb5OXSsFCxSiVyz8rTLj000fq57nuuXZ9b4Of6ZVtA9j4nd6+sC6qummHfGitTdLr8ij60tYC9nyrnUHj+HRYoiWoWBStAiP4d164ZoEfEjecvXJj+HsXmt4I9UErTKr5hkJi+1hgtR0C6/ogupegP+namQ+trm51DSva8TjPnEyTq/0jA7+6EX5LcALfQrDL1ELNjvueQ60Eq/crfaS3UbutwWoKV+ThksZp21ym9TbWivX9GJQaSMh3nlDrTZr5xqwmfZb1oZoHb7lRE/khZto0qQt92vuA/lzLAS4+33K7qwJ/hF+xvwD/ArgoXgV9lfssqPacqB4ggd7EO8MT8qFWcFv6GU37JFR11moQ9800fzfixcCX7iKLvnUx1K8vMi/1FuO7TOjwZxX8zVxDMuz5yK/5Y1KDeiRb+VWT/qZ+V+103E9SAREru0YlL09turN6pTukRYbU+N+rFw/preXPLHIIQzLg/7Iy4s3pfOzuUzntQTknqT8yf1JrvDLGllCNKIv0b3fY+Wetmy+vo4Ee9BbyA0pcbiXzE0z6tf9G7Cl8q3o+T1LZpI6XpKqnMv9UU9c+sX5qz4lGYeEsYoY6S7FK5x+NZLNBevvtz6CxnZHkArfkRiy13TD/ejkVSCfnpM81m+kLOAXYyWVl8l/efrvJiesviXZMfPTB/bf0GTQ9Sv7MoolNUUW1SchsbyP5o1vcjKGNPsbWp5rsbVD55fSM0uF0e1iBLUV60FXpJqWP3o+dNrdk58yZVpSW3FUyA2Wj+js6vDlygeUKJh3YNHPMJjdR8e3/0md1MqHqAjTQVvQ9Pn5339Tvo7c2kbiIqrUw1j8QEWA+tPMjnwoFRPkcZSEtfvbm7ptOL5HCKXvKoM1EdaSHIweCpaGsn/aDDVbuONM+Vzt9tW2VDXqmSYKFoayt9JMlcGiru05ixLWZIfag4ZPN1nytNopuoT1Hd+SkvHXs4OHJmjXvJT0YnLOFI+HWCyfkaZdzFbPPYuN6PRuHP2azG7OHharmxG/QsaX8+Hm1H/9Pau81w21J8kNFsfpNs0JwzD7T/+W7Nwy6GGbah/1v8PCzXNGjRsg9//CfzgBz9zwA9+8DPHkfzay+8j+H362mKO4QcAAAAAAAAAAAAAAAAAAAAAAAAch38B+F/JPRHMAyYAAAAASUVORK5CYII=" 
+                class="card-img-top" 
+                alt="HTML Logo">
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://www.w3schools.com/js/default.asp" 
+                  class="btn btn-primary" 
+                  target="_blank">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+      </div>
+      <!-- End: Row Section -->
+
+      <!-- Begin: Row Section -->
+      <div class="row gx-5 gy-5 mb-5" data-aos="zoom-in">
+        <!-- Begin: Row Section -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="data:image/png;base64,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" 
+                class="card-img-top" 
+                alt="HTML Logo">
+            <div class="card-body">
+              <h5 class="card-title">Vue JS</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://vuejs.org/guide/introduction.html" 
+                  class="btn btn-primary" 
+                  target="_blank">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="data:image/png;base64,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" 
+                class="card-img-top" 
+                alt="HTML Logo">
+            <div class="card-body">
+              <h5 class="card-title">React JS</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://react.dev/" 
+                  class="btn btn-primary" 
+                  target="_blank">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="data:image/png;base64,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" 
+                class="card-img-top" 
+                alt="HTML Logo">
+            <div class="card-body">
+              <h5 class="card-title">Angular JS</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="card-body">
+              <a href="https://angular.io/docs" 
+                  class="btn btn-primary" 
+                  target="_blank">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+      </div>
+      <!-- End: Row Section -->
+
+    </section>
+
+    <!--***********************************************************************
+     $$$$$$\                       $$\                           $$\     
+    $$  __$$\                      $$ |                          $$ |    
+    $$ /  \__| $$$$$$\  $$$$$$$\ $$$$$$\    $$$$$$\   $$$$$$$\ $$$$$$\   
+    $$ |      $$  __$$\ $$  __$$\\_$$  _|   \____$$\ $$  _____|\_$$  _|  
+    $$ |      $$ /  $$ |$$ |  $$ | $$ |     $$$$$$$ |$$ /        $$ |    
+    $$ |  $$\ $$ |  $$ |$$ |  $$ | $$ |$$\ $$  __$$ |$$ |        $$ |$$\ 
+    \$$$$$$  |\$$$$$$  |$$ |  $$ | \$$$$  |\$$$$$$$ |\$$$$$$$\   \$$$$  |
+     \______/  \______/ \__|  \__|  \____/  \_______| \_______|   \____/ 
+                                                                        
+                                                                       
+    Description: Contact Section
+    *************************************************************************-->
+    <section id="contact" class="container">
+      <h2 class="section-title pb-5">Contact Us</h2>
+      <!-- Begin: Form Section -->
+      <form>
+        <!-- Begin: Row Section -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <label for="first_name" class="form-label fw-bold">First Name</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="first_name" 
+                   name="first_name"
+                   placeholder="Ex. John" 
+                   required>
+          </div>
+          <div class="col-md-6">
+            <label for="last_name" class="form-label fw-bold">Last Name</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="last_name" 
+                   name="last_name"
+                   placeholder="Ex. Doe" 
+                   required>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-12">
+            <label for="email" class="form-label fw-bold">Email Address</label>
+            <input type="email" 
+                   class="form-control" 
+                   id="email" 
+                   name="email"
+                   placeholder="Ex. johndoe@gmail.com" 
+                   required>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-12">
+            <label for="message" class="form-label fw-bold">Message</label>
+            <textarea class="form-control" 
+                      id="message"
+                      name="message"
+                      placeholder="Enter a message here..." 
+                      rows="3" 
+                      required></textarea>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+
+        <!-- Begin: Row Section -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </div>
+        </div>
+        <!-- End: Row Section -->
+      </form>
+      <!-- End: Form Section -->
+
+    </section>
+
+  </main>
+
+  <!--**********************************************************
+  $$$$$$$$\                   $$\                         
+  $$  _____|                  $$ |                        
+  $$ |    $$$$$$\   $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$\  
+  $$$$$\ $$  __$$\ $$  __$$\\_$$  _|  $$  __$$\ $$  __$$\ 
+  $$  __|$$ /  $$ |$$ /  $$ | $$ |    $$$$$$$$ |$$ |  \__|
+  $$ |   $$ |  $$ |$$ |  $$ | $$ |$$\ $$   ____|$$ |      
+  $$ |   \$$$$$$  |\$$$$$$  | \$$$$  |\$$$$$$$\ $$ |      
+  \__|    \______/  \______/   \____/  \_______|\__|      
+                                            
+  Description: Footer Section
+  ************************************************************-->
+  <footer class="bg-danger text-center text-white">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright Activiy-7.
+    </div>
+    <!-- Copyright -->
+  </footer>
+ 
+
+  <!--************************************************************
+   $$$$$$\                      $$\            $$\               
+  $$  __$$\                     \__|           $$ |              
+  $$ /  \__| $$$$$$$\  $$$$$$\  $$\  $$$$$$\ $$$$$$\    $$$$$$$\ 
+  \$$$$$$\  $$  _____|$$  __$$\ $$ |$$  __$$\\_$$  _|  $$  _____|
+   \____$$\ $$ /      $$ |  \__|$$ |$$ /  $$ | $$ |    \$$$$$$\  
+  $$\   $$ |$$ |      $$ |      $$ |$$ |  $$ | $$ |$$\  \____$$\ 
+  \$$$$$$  |\$$$$$$$\ $$ |      $$ |$$$$$$$  | \$$$$  |$$$$$$$  |
+   \______/  \_______|\__|      \__|$$  ____/   \____/ \_______/ 
+                                    $$ |                         
+                                    $$ |                         
+                                    \__|                         
+
+                                
+  Description: Scripts Section
+  **************************************************************-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="aos.js"></script>
+</body>
+</html>
